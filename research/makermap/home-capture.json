@@ -1,0 +1,29 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "/usr/bin/chromium"
+  },
+  "start_url": {
+    "url": "https://www.makermap.lol/"
+  },
+  "actions": [
+    {
+      "step_id": "settle",
+      "action": "wait_for_timeout",
+      "duration_ms": 2500
+    }
+  ],
+  "capture": {
+    "at_end": [
+      "url",
+      "dom",
+      "accessibility",
+      "screenshot"
+    ],
+    "events": [
+      "network",
+      "console",
+      "page-errors"
+    ]
+  }
+}
